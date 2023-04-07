@@ -10,7 +10,7 @@ class DBMS_DAO_Factory:
 
     def get_dao_implementation(self, option: str):
         m_dao = {
-            'account': self.dbms_dao.AccountDAO,
+            'user': self.dbms_dao.UserDAO,
             'player': self.dbms_dao.PlayerDAO,
             'balance': self.dbms_dao.BalanceDAO,
                  }

@@ -1,3 +1,3 @@
-from .account import Account
+from .user import User
 from .balance import Balance
 from .player import Player

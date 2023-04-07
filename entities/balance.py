@@ -1,11 +1,11 @@
-from .base_entity import  Entity
+from .base_entity import Entity
 
 
 class Balance(Entity):
-    def __init__(self, id: int,
+    def __init__(self, balance_id: int,
                        real_money: float = 0,
                        chips: int = 0,):
-        self._id = id
+        self._id = balance_id
         self._real_money = real_money
         self._chips = chips
 
@@ -24,8 +24,8 @@ class Balance(Entity):
         return self._id
 
     @id.setter
-    def id(self, id):
-        self._id = id
+    def id(self, balance_id):
+        self._id = balance_id
 
     @property
     def real_money(self):

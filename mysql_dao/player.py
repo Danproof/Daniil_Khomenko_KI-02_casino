@@ -27,7 +27,7 @@ class PlayerDAO(PlayerIDAO, metaclass=WithConnectionMeta):
             cursor.execute(stmt)
 
     def update(self, cursor, players: List[Player]):
-        stmt = 'UPDATE player SET account_id = %s, ' + \
+        stmt = 'UPDATE player SET user_id = %s, ' + \
                                   'balance_id = %s, ' + \
                              'WHERE id = %s'
         for player in players:

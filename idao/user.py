@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from entities.account import Account
+from entities.user import User
 
 
-class AccountIDAO(ABC):
+class UserIDAO(ABC):
     @abstractmethod
     def select_all(self, cursor):
         '''
@@ -19,19 +19,19 @@ class AccountIDAO(ABC):
         '''
 
     @abstractmethod
-    def insert(self, cursor,  accounts: List[Account]):
+    def insert(self, cursor,  users: List[User]):
         '''
         Should insert given list of users
         '''
 
     @abstractmethod
-    def update(self, cursor,  accounts: List[Account]):
+    def update(self, cursor,  users: List[User]):
         '''
         Should update given list of users
         '''
 
     @abstractmethod
-    def delete(self, cursor,  accounts: List[Account]):
+    def delete(self, cursor,  users: List[User]):
         '''
         Should delete given list of users and
         '''
